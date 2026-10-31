@@ -2,3 +2,40 @@
 @media(max-width:850px){.hero{grid-template-columns:1fr;gap:35px;padding-block:55px}.hero-card{max-width:600px}.feature-grid,.skill-grid{grid-template-columns:repeat(2,1fr)}.content-grid{grid-template-columns:1fr;gap:25px}.side-column{display:grid;grid-template-columns:1fr 1fr;gap:15px}.panel{margin:0}.split{gap:30px}.link-grid{grid-template-columns:1fr}.contact-panel{gap:25px}.project-visual{height:160px}}
 @media(max-width:620px){.site-header{height:72px}.menu-toggle{display:block}.nav{display:none;position:absolute;left:0;right:0;top:71px;background:#fff;padding:12px 22px 18px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.nav.open{display:flex}.nav a{padding:12px}.container{width:min(100% - 32px,1120px)}.hero{padding-block:45px 55px}.hero h1{font-size:2.65rem}.hero-card{padding:25px}.section{padding-block:58px}.feature-grid,.skill-grid,.project-grid,.split,.contact-panel{grid-template-columns:1fr}.side-column{grid-template-columns:1fr}.cta-inner{align-items:flex-start;flex-direction:column}.page-hero{padding:50px 0}.page-hero h1{font-size:2.5rem}.project-visual{height:145px}.contact-panel{padding:25px}.footer-inner{flex-direction:column;align-items:flex-start;gap:7px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+
+/* Homepage photographic hero */
+.home-hero{
+  width:100%;max-width:none;margin:0;padding:78px max(22px,calc((100vw - 1120px)/2));
+  min-height:690px;position:relative;isolation:isolate;
+  background-image:linear-gradient(90deg,rgba(8,20,39,.94) 0%,rgba(8,20,39,.82) 48%,rgba(8,20,39,.38) 100%),url("kelvin-kiba.jpg");
+  background-size:cover;background-position:center 34%;background-repeat:no-repeat;
+}
+.home-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,17,33,.25),transparent 45%);z-index:-1}
+.hero-layout{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:70px}
+.home-hero h1,.home-hero h2{color:#fff}
+.home-hero .hero-copy p:not(.eyebrow),.home-hero .lead{color:#e4eaf4}
+.home-hero .eyebrow{color:#8de3d4}
+.home-hero h1 span{color:#8de3d4}
+.home-hero .quick-links a{color:#b9d0ff}
+.home-hero .secondary{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35);color:#fff;backdrop-filter:blur(8px)}
+.home-hero .hero-card{background:rgba(8,25,49,.78);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(12px)}
+.hero-portrait{width:92px;height:92px;object-fit:cover;object-position:center 25%;border-radius:22px;border:3px solid rgba(255,255,255,.75);margin-bottom:22px;position:relative;z-index:1}
+.contact-form-panel{grid-template-columns:.72fr 1.28fr;align-items:start}
+.contact-intro .contact-details{margin-top:28px}
+.enquiry-form{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;min-width:0}
+.form-heading h3{font-size:1.35rem;margin-bottom:6px}
+.form-heading p{font-size:.88rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:20px}
+.form-grid label{display:flex;flex-direction:column;gap:7px;color:var(--ink);font-size:.85rem;font-weight:700}
+.form-grid input,.form-grid select,.form-grid textarea{width:100%;border:1px solid #ccd6e3;border-radius:10px;padding:12px 13px;font:inherit;font-size:.92rem;color:var(--ink);background:#fff;outline:none}
+.form-grid input:focus,.form-grid select:focus,.form-grid textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #2458d31c}
+.form-grid textarea{resize:vertical;min-height:130px}
+.form-grid small{font-size:.75rem;font-weight:450;line-height:1.5;color:var(--muted)}
+.full-field{grid-column:1/-1}
+.form-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.form-actions button{border:0;cursor:pointer;font:inherit}
+.whatsapp-button{background:#16834b;color:#fff;box-shadow:0 10px 22px #16834b24}
+.form-note{margin:14px 0 0;font-size:.78rem}
+@media(max-width:850px){.home-hero{padding:58px 22px;min-height:0}.hero-layout{grid-template-columns:1fr;gap:35px}.contact-form-panel{grid-template-columns:1fr}}
+@media(max-width:620px){.home-hero{padding:48px 16px;background-position:62% center}.home-hero h1{font-size:2.5rem}.form-grid{grid-template-columns:1fr}.full-field{grid-column:auto}.enquiry-form{padding:20px}.form-actions{flex-direction:column}.form-actions .button{width:100%}}

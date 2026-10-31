@@ -64,14 +64,59 @@
     </section>
 
     <section class="section container" id="contact">
-      <div class="contact-panel">
-        <div><p class="eyebrow">CONTACT</p><h2>Let’s discuss an opportunity.</h2><p>I’m open to relevant opportunities in ICT support, software development, data analysis, and customer-facing business or banking roles.</p></div>
-        <div class="contact-details">
-          <a href="mailto:kibakelvin988@gmail.com"><span>Email</span><strong>kibakelvin988@gmail.com</strong></a>
-          <a href="tel:+254796293126"><span>Phone</span><strong>+254 796 293 126</strong></a>
-          <div><span>Location</span><strong>Kenya</strong></div>
-          <a class="button primary" href="mailto:kibakelvin988@gmail.com?subject=Professional%20Opportunity%20-%20Kelvin%20Kiba">Send an email ↗</a>
+      <div class="contact-panel contact-form-panel">
+        <div class="contact-intro">
+          <p class="eyebrow">CONTACT / PROJECT ENQUIRY</p>
+          <h2>Tell me how I can help.</h2>
+          <p>Complete the form with a few details about yourself and the support, service, or opportunity you would like to discuss. You can then send your enquiry directly through email or WhatsApp.</p>
+          <div class="contact-details">
+            <a href="mailto:kibakelvin988@gmail.com"><span>Email</span><strong>kibakelvin988@gmail.com</strong></a>
+            <a href="https://wa.me/254796293126" target="_blank" rel="noopener noreferrer"><span>WhatsApp</span><strong>+254 796 293 126</strong></a>
+            <div><span>Location</span><strong>Kenya</strong></div>
+          </div>
         </div>
+        <form class="enquiry-form" id="enquiryForm">
+          <div class="form-heading">
+            <h3>Your details</h3>
+            <p>Fields marked * are required. Please provide enough information for me to understand your request.</p>
+          </div>
+          <div class="form-grid">
+            <label>Full name *<input name="name" type="text" autocomplete="name" placeholder="e.g. Jane Wanjiku" required minlength="2"></label>
+            <label>Email address *<input name="email" type="email" autocomplete="email" placeholder="e.g. jane@example.com" required></label>
+            <label>Phone / WhatsApp number<input name="phone" type="tel" autocomplete="tel" placeholder="e.g. +254 7XX XXX XXX"></label>
+            <label>Country *<input name="country" type="text" autocomplete="country-name" placeholder="e.g. Kenya" required></label>
+            <label class="full-field">What is your enquiry about? *
+              <select name="service" required>
+                <option value="">Select a category</option>
+                <option>ICT support / troubleshooting</option>
+                <option>Software or app development</option>
+                <option>Website development</option>
+                <option>Data analysis / visualisation</option>
+                <option>Business or employment opportunity</option>
+                <option>Collaboration / partnership</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label class="full-field">Subject *<input name="subject" type="text" placeholder="Brief title for your enquiry" required></label>
+            <label class="full-field">Describe the problem, project, or opportunity *
+              <textarea name="message" rows="6" placeholder="Explain what you need help with, what you have tried so far, any relevant deadlines, and the result you are hoping to achieve." required minlength="15"></textarea>
+              <small>Tip: Include useful details, error messages (if any), your expected outcome, and your preferred timeline. Do not include passwords, bank details, or other confidential information.</small>
+            </label>
+            <label class="full-field">How would you prefer me to respond? *
+              <select name="reply" required>
+                <option value="">Choose your preferred contact method</option>
+                <option>Email</option>
+                <option>WhatsApp</option>
+                <option>Either email or WhatsApp</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button class="button primary" type="submit" data-send="email">Send via email ↗</button>
+            <button class="button whatsapp-button" type="button" id="sendWhatsApp">Send via WhatsApp ↗</button>
+          </div>
+          <p class="form-note" id="formNote" role="status" aria-live="polite">Your message will open in your selected email app or WhatsApp for you to review and send.</p>
+        </form>
       </div>
     </section>
   </main>
